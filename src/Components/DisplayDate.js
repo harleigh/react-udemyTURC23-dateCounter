@@ -20,7 +20,7 @@ export function DisplayDate({ shiftAmt }) {
     if (shiftAmt === 0) {
       msg = "Today's date is ";
     } else if (shiftAmt < 0) {
-      msg = `${shiftAmt} ${getDayConjugation()} ago the date was `;
+      msg = `${Math.abs(shiftAmt)} ${getDayConjugation()} ago the date was `;
     } else {
       msg = `${shiftAmt} ${getDayConjugation()} from today the date will be `;
     }
