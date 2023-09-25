@@ -1,15 +1,35 @@
 /*
  * The generic component for step amount and count amount
  * --shiftAmt is the amount we shift by via addition
+ *
+ *  The date modifier has a flag signifying whether the amount
+ *  can be <= 0
  * */
 
-export function DateModifier({ title, shiftAmt, val, setVal }) {
+export function DateModifier({
+  title,
+  shiftAmt,
+  val,
+  allowZeroOrLess,
+  setVal,
+}) {
   const incVal = () => {
     setVal((curVal) => curVal + shiftAmt);
   };
 
   const decVal = () => {
-    setVal((curVal) => curVal - shiftAmt);
+    setVal((curVal) => {
+      const shiftedAmount = curVal - shiftAmt;
+      if (allowZeroOrLess) {
+        return shiftedAmount;
+      } else {
+        if (shiftedAmount > 0) {
+          return shiftedAmount;
+        } else {
+          return curVal;
+        }
+      }
+    });
   };
 
   return (

@@ -3,6 +3,7 @@ project in the udemy course: The ultimate React Course 2023 by Jonas Schmedtmann
 
 Alterations:
 * App broken into Components (which are reused): The step and counter amount are the same component with different props
+* Step (offset amount to the counter that jumps the date) is not allowed to go negative.
 * Minor CSS
 
 Screenshots:

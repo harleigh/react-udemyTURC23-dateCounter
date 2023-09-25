@@ -14,12 +14,14 @@ export default function DateApp() {
           title={"Step"}
           shiftAmt={1}
           val={offset}
+          allowZeroOrLess={false}
           setVal={setOffset}
         />
         <DateModifier
           title={"Count"}
           shiftAmt={offset}
           val={count}
+          allowZeroOrLess={true}
           setVal={setCount}
         />
         <DisplayDate shiftAmt={count} />
