@@ -13,10 +13,9 @@ export function DateModifier({ title, val, setVal }) {
 
   return (
     <>
-      <div className="modifier">
-        <span>
-          {title}: {val}
-        </span>
+      <div className="dateModifier">
+        <div className="modTitle">{title}:</div>
+        <div className="modVal">{val}</div>
         <button onClick={incVal}>+</button>
         <button onClick={decVal}>-</button>
       </div>
