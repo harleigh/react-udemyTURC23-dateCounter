@@ -1,14 +1,15 @@
 /*
  * The generic component for step amount and count amount
+ * --shiftAmt is the amount we shift by via addition
  * */
 
-export function DateModifier({ title, val, setVal }) {
+export function DateModifier({ title, shiftAmt, val, setVal }) {
   const incVal = () => {
-    setVal((curVal) => curVal + 1);
+    setVal((curVal) => curVal + shiftAmt);
   };
 
   const decVal = () => {
-    setVal((curVal) => curVal - 1);
+    setVal((curVal) => curVal - shiftAmt);
   };
 
   return (

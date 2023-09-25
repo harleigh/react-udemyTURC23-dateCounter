@@ -4,17 +4,27 @@ import { DateModifier } from "./DateModifier";
 import { DisplayDate } from "./DisplayDate";
 
 export default function DateApp() {
-  const [multiplier, setMultiplier] = useState(1);
+  const [offset, setOffset] = useState(1);
   const [count, setCount] = useState(0);
 
-  const amtShiftDays = multiplier * count;
+  // const amtShiftDays = offset * count;
 
   return (
     <>
       <div className="dateApp">
-        <DateModifier title={"Step"} val={multiplier} setVal={setMultiplier} />
-        <DateModifier title={"Count"} val={count} setVal={setCount} />
-        <DisplayDate shiftAmt={amtShiftDays} />
+        <DateModifier
+          title={"Step"}
+          shiftAmt={1}
+          val={offset}
+          setVal={setOffset}
+        />
+        <DateModifier
+          title={"Count"}
+          shiftAmt={offset}
+          val={count}
+          setVal={setCount}
+        />
+        <DisplayDate shiftAmt={count} />
       </div>
     </>
   );
