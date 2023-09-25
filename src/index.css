@@ -3,7 +3,7 @@
  */
 
 * {
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
 
 body {
@@ -46,16 +46,10 @@ body {
 }
 
 
-/* min height to fix buttons moving from longer text messages */
 .displayDate {
   text-align: center;
-  font-size: 15px;
-  margin: 40px 0;
-  font-weight:normal;
-  /* min-height: 80px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 25px;
+  margin: 40px 0; /*gives us some whitespace above us*/
 }
 
 

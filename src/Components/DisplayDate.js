@@ -26,7 +26,7 @@ export function DisplayDate({ shiftAmt }) {
     }
     msg += getDateShift();
 
-    return <span>{msg}</span>;
+    return msg;
   };
 
   return <div className="displayDate">{setMessage()}</div>;
