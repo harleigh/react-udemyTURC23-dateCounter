@@ -7,8 +7,6 @@ export default function DateApp() {
   const [offset, setOffset] = useState(1);
   const [count, setCount] = useState(0);
 
-  // const amtShiftDays = offset * count;
-
   return (
     <>
       <div className="dateApp">
