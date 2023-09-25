@@ -14,7 +14,7 @@ body {
 /* the main app css */
 .dateApp {
   width: 600px;
-  height: 200px;
+  height: 250px;
   background-color: #f7f7f7; /*pretty greyish background*/
   border-radius: 7px;
   margin: 100px auto;   /* placement of containing box*/
