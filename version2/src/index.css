@@ -20,6 +20,8 @@ body {
   margin: 100px auto;   /* placement of containing box*/
   padding: 25px 100px;  /* placement of contents inside box*/
 }
+
+/* center the button horizontally  */
 button {
     margin:0 auto;
     display:block;
