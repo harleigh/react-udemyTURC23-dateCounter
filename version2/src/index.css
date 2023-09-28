@@ -14,13 +14,16 @@ body {
 /* the main app css */
 .dateApp {
   width: 600px;
-  height: 250px;
+  height: 350px;
   background-color: #f7f7f7; /*pretty greyish background*/
   border-radius: 7px;
   margin: 100px auto;   /* placement of containing box*/
   padding: 25px 100px;  /* placement of contents inside box*/
 }
-
+button {
+    margin:0 auto;
+    display:block;
+}
 
 
 
