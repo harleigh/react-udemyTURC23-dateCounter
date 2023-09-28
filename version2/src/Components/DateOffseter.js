@@ -6,7 +6,7 @@ export function DateOffsetter({ offsetAmt, setOffsetAmt }) {
         <input
           type={"range"}
           value={offsetAmt}
-          min={0}
+          min={1}
           max={14}
           onChange={(e) => setOffsetAmt(Number(e.target.value))}
         />
