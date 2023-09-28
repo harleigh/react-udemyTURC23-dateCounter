@@ -24,7 +24,7 @@ export function DateModifier({
         <input
           type={"text"}
           value={jumpAmount}
-          onChange={(e) => setJumpAmount(e.target.value)}
+          onChange={(e) => setJumpAmount(Number(e.target.value))}
         />
         <button onClick={incVal}>+</button>
         <button onClick={decVal}>-</button>
