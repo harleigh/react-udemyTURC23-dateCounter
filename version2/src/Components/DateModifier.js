@@ -1,42 +1,31 @@
 /*
- * The generic component for step amount and count amount
- * --shiftAmt is the amount we shift by via addition
- *
- *  The date modifier has a flag signifying whether the amount
- *  can be <= 0
  * */
 
 export function DateModifier({
-  title,
-  shiftAmt,
-  val,
-  allowZeroOrLess,
-  setVal,
+  shiftAmt, //from the step modifier
+  jumpAmount, //amount of days we jump
+  setJumpAmount, //the setter
 }) {
   const incVal = () => {
-    setVal((curVal) => curVal + shiftAmt);
+    setJumpAmount((curVal) => curVal + shiftAmt);
   };
 
   const decVal = () => {
-    setVal((curVal) => {
+    setJumpAmount((curVal) => {
       const shiftedAmount = curVal - shiftAmt;
-      if (allowZeroOrLess) {
-        return shiftedAmount;
-      } else {
-        if (shiftedAmount > 0) {
-          return shiftedAmount;
-        } else {
-          return curVal;
-        }
-      }
+      return shiftedAmount;
     });
   };
 
   return (
     <>
       <div className="dateModifier">
-        <div className="modTitle">{title}:</div>
-        <div className="modVal">{val}</div>
+        <div className="modTitle">Days to Jump:</div>
+        <input
+          type={"text"}
+          value={jumpAmount}
+          onChange={(e) => setJumpAmount(e.target.value)}
+        />
         <button onClick={incVal}>+</button>
         <button onClick={decVal}>-</button>
       </div>

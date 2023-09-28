@@ -2,29 +2,22 @@
 import { useState } from "react";
 import { DateModifier } from "./DateModifier";
 import { DisplayDate } from "./DisplayDate";
+import { DateOffsetter } from "./DateOffseter";
 
 export default function DateApp() {
   const [offset, setOffset] = useState(1);
-  const [count, setCount] = useState(0);
+  const [jumpAmt, setJumpAmt] = useState(0);
 
   return (
     <>
       <div className="dateApp">
+        <DateOffsetter offsetAmt={offset} setOffsetAmt={setOffset} />
         <DateModifier
-          title={"Step"}
-          shiftAmt={1}
-          val={offset}
-          allowZeroOrLess={false}
-          setVal={setOffset}
-        />
-        <DateModifier
-          title={"Count"}
           shiftAmt={offset}
-          val={count}
-          allowZeroOrLess={true}
-          setVal={setCount}
+          jumpAmount={jumpAmt}
+          setJumpAmount={setJumpAmt}
         />
-        <DisplayDate shiftAmt={count} />
+        <DisplayDate shiftAmt={jumpAmt} />
       </div>
     </>
   );
