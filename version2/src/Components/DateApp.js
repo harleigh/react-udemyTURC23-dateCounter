@@ -1,4 +1,4 @@
-/* Project based on "steps" project from TURC23 */
+/* Project based on "date counter" project from TURC23 */
 import { useState } from "react";
 import { DateModifier } from "./DateModifier";
 import { DisplayDate } from "./DisplayDate";
