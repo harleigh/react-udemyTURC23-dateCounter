@@ -8,6 +8,10 @@ export default function DateApp() {
   const [offset, setOffset] = useState(1);
   const [jumpAmt, setJumpAmt] = useState(0);
 
+  const resetApp = () => {
+    setOffset(1);
+    setJumpAmt(0);
+  };
   return (
     <>
       <div className="dateApp">
@@ -18,6 +22,7 @@ export default function DateApp() {
           setJumpAmount={setJumpAmt}
         />
         <DisplayDate shiftAmt={jumpAmt} />
+        {jumpAmt !== 0 && <button onClick={resetApp}>Reset</button>}
       </div>
     </>
   );
