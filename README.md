@@ -4,6 +4,8 @@ Two versions of the date counter:
 * Version 1: basic addition and subtraction buttons to modify the current date
 * Version 2: A text input field to enter the number of days forward/backward, and the step-amount is replaced by a slider (fun!).
 
+## Modifications on Version 2:
+* Big one: Negative dates can be put into the text input field (and the date is correctly calculated)
 
 
 ## Modifications on version 1
