@@ -18,8 +18,8 @@ export default function DateApp() {
         <DateOffsetter offsetAmt={offset} setOffsetAmt={setOffset} />
         <DateModifier
           shiftAmt={offset}
-          jumpAmount={jumpAmt}
-          setJumpAmount={setJumpAmt}
+          daysToJump={jumpAmt}
+          setDaysToJump={setJumpAmt}
         />
         <DisplayDate shiftAmt={jumpAmt} />
         {jumpAmt !== 0 && <button onClick={resetApp}>Reset</button>}
